@@ -1,0 +1,23 @@
+.navbar {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 22px;
+  }
+
+  &__link {
+    color: #fff;
+    transition: 0.1s;
+  }
+
+  &__link:hover {
+    color: #fedb3f;
+  }
+}

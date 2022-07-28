@@ -1,0 +1,39 @@
+.review-card {
+  background-color: #f8faf9;
+
+  &__inner {
+    display: flex;
+    padding: 42px;
+    padding-right: 142px;
+  }
+
+  &__avatar {
+    width: 253px;
+    height: 264px;
+    margin-right: 40px;
+  }
+
+  &__title {
+    color: #292929;
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 32px;
+    margin-top: 28px;
+    margin-bottom: 14px;
+  }
+
+  &__text {
+    color: #666666;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 25px;
+  }
+
+  &__name {
+    color: #292929;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}

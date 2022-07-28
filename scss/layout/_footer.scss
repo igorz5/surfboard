@@ -1,0 +1,22 @@
+.footer {
+  .container {
+    padding: 18px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .contacts {
+    color: #292929;
+
+    &__phone-link {
+      color: #292929;
+      font-weight: 400;
+    }
+
+    &__phone-icon {
+      fill: #292929;
+      margin-right: 7px;
+    }
+  }
+}

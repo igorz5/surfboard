@@ -1,0 +1,164 @@
+.order {
+  background: url("./../../img/bg/order.png") no-repeat center / cover;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .title {
+    margin-top: 62px;
+    margin-bottom: 61px;
+  }
+
+  &__form {
+    display: flex;
+  }
+
+  &__col-1 {
+    width: 462px;
+    margin-right: 26px;
+  }
+
+  &__col-2 {
+    width: 450px;
+  }
+
+  &__input-title,
+  &__control-title {
+    color: #fff;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  &__input-title {
+    margin-bottom: 2px;
+  }
+
+  &__row {
+    display: flex;
+  }
+
+  &__row:not(:last-child) {
+    margin-bottom: 14px;
+  }
+
+  &__row-item {
+    flex: 1;
+  }
+
+  &__row-item:not(:last-child) {
+    margin-right: 14px;
+  }
+
+  &__input,
+  &__input-textarea {
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 19px 12px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000;
+  }
+
+  &__input {
+    height: 58px;
+    width: 100%;
+  }
+
+  &__input:focus,
+  &__input-textarea:focus {
+    outline: 3px solid #fedb3f;
+  }
+
+  &__input-textarea {
+    width: 450px;
+    height: 152px;
+    resize: none;
+    margin-bottom: 36px;
+  }
+
+  &__controls {
+    margin-bottom: 44px;
+  }
+
+  &__input-radio,
+  &__input-checkbox {
+    display: none;
+  }
+
+  &__radio,
+  &__checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  &__radio {
+    border-radius: 50%;
+  }
+
+  &__input-radio:checked + &__radio::after {
+    display: inline-block;
+    content: "";
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    background-color: #fedb3f;
+  }
+
+  &__checkbox {
+    border-radius: 4px;
+  }
+
+  &__checkbox-icon {
+    fill: #fedb3f;
+    width: 40%;
+    height: 35%;
+    display: none;
+  }
+
+  &__input-checkbox:checked + &__checkbox &__checkbox-icon {
+    display: inline-block;
+  }
+
+  &__control {
+    display: flex;
+  }
+
+  &__control-title {
+    text-align: center;
+    line-height: 26px;
+  }
+
+  &__form-buttons {
+    display: flex;
+    margin-left: -10px;
+    margin-bottom: 85px;
+  }
+
+  &__btn-submit {
+    margin-right: 22px;
+  }
+
+  &__btn-reset {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #fff;
+    transition: 0.1s;
+  }
+
+  &__btn-reset:hover {
+    color: #fedb3f;
+  }
+}

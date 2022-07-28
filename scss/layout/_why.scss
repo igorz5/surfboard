@@ -1,0 +1,56 @@
+.why {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+  .container {
+    padding: 0 76px;
+    margin-bottom: 112px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title {
+    margin-top: 120px;
+    margin-bottom: 17px;
+  }
+
+  &__subtitle {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #666666;
+    width: 436px;
+    margin-bottom: 49px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    width: calc(100% / 3);
+    position: relative;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 55px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 67px;
+      height: 21px;
+      background: url("./../../img/sep.svg") no-repeat center / cover;
+      top: 22%;
+      left: 100%;
+      transform: translateX(-5px);
+    }
+  }
+}

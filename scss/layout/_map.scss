@@ -1,0 +1,9 @@
+.map {
+  display: flex;
+  flex-direction: column;
+
+  &__container {
+    flex: 1;
+    background: url("./../../img/bg/map.png") no-repeat center / cover;
+  }
+}
