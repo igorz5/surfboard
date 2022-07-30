@@ -74,7 +74,6 @@ button {
   margin-bottom: 17px;
 }
 .hero__container {
-  padding: 0 80px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -217,15 +216,13 @@ button {
   text-align: center;
 }
 .why .container {
-  padding: 0 76px;
-  margin-bottom: 112px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .why .title {
-  margin-top: 120px;
+  margin-top: 0;
   margin-bottom: 17px;
 }
 .why__subtitle {
@@ -296,9 +293,6 @@ button {
 .boards {
   background-color: #f8faf9;
 }
-.boards .container {
-  padding: 0 50px;
-}
 .boards__inner {
   height: 100%;
   position: relative;
@@ -338,6 +332,9 @@ button {
 .board-card__img {
   max-width: 100%;
   max-height: 100%;
+}
+.board-card__params {
+  margin-bottom: 52px;
 }
 .board-card__params-show {
   display: inline-block;
@@ -426,7 +423,6 @@ button {
   font-weight: 700;
   font-size: 36px;
   line-height: 43px;
-  margin-top: 52px;
   margin-bottom: 24px;
   text-transform: uppercase;
   color: #292929;
@@ -464,7 +460,7 @@ button {
   justify-content: center;
 }
 .team .title {
-  margin-top: 67px;
+  margin-top: 0;
   margin-bottom: 53px;
 }
 .team__list {
@@ -601,10 +597,9 @@ button {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 0 79px;
 }
 .reviews .title {
-  margin-top: 58px;
+  margin-top: 0;
   margin-bottom: 32px;
 }
 .reviews__list {
@@ -650,12 +645,14 @@ button {
   height: 264px;
   margin-right: 40px;
 }
+.review-card__block {
+  padding-top: 28px;
+}
 .review-card__title {
   color: #292929;
   font-weight: 700;
   font-size: 27px;
   line-height: 32px;
-  margin-top: 28px;
   margin-bottom: 14px;
 }
 .review-card__text {
@@ -681,6 +678,10 @@ button {
   align-items: center;
   flex-direction: column;
 }
+.how .title {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
 .how__video {
   width: 662px;
   height: 392px;
@@ -697,7 +698,7 @@ button {
   flex-direction: column;
 }
 .order .title {
-  margin-top: 62px;
+  margin-top: 0;
   margin-bottom: 61px;
 }
 .order__form {

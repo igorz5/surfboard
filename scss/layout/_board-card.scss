@@ -18,6 +18,10 @@
     max-height: 100%;
   }
 
+  &__params {
+    margin-bottom: 52px;
+  }
+
   &__params-show {
     display: inline-block;
     justify-content: center;
@@ -118,7 +122,6 @@
     font-weight: 700;
     font-size: 36px;
     line-height: 43px;
-    margin-top: 52px;
     margin-bottom: 24px;
     text-transform: uppercase;
     color: #292929;
