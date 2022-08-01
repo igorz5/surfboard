@@ -1,11 +1,15 @@
 .title {
-  color: #292929;
+  color: $black;
   font-weight: 700;
-  font-size: 48px;
-  line-height: 58px;
+  font-size: rem(48px);
+  line-height: 1.2;
   text-transform: uppercase;
 
   &--white {
-    color: #fff;
+    color: $white;
+  }
+
+  @include mobile {
+    font-size: rem(40px);
   }
 }

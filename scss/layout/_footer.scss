@@ -1,22 +1,39 @@
 .footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: $white;
+  width: 100%;
+
   .container {
-    padding: 18px 80px;
+    padding: rem(18px) 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
-  .contacts {
-    color: #292929;
+  &__contacts {
+    color: $black;
 
-    &__phone-link {
-      color: #292929;
+    @include mobile {
+      .contacts__phone {
+        display: flex;
+        justify-content: center;
+
+        margin-bottom: rem(12px);
+      }
+    }
+
+    .contacts__phone-link {
       font-weight: 400;
     }
 
-    &__phone-icon {
-      fill: #292929;
-      margin-right: 7px;
+    .contacts__phone-icon {
+      fill: $black;
     }
   }
 }

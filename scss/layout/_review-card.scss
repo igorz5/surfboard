@@ -3,40 +3,53 @@
 
   &__inner {
     display: flex;
-    padding: 42px;
-    padding-right: 142px;
+    padding: rem(42px);
+    padding-right: rem(142px);
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+      padding: rem(56px) rem(24px) rem(46px);
+      text-align: center;
+    }
   }
 
   &__avatar {
-    width: 253px;
-    height: 264px;
-    margin-right: 40px;
+    width: rem(253px);
+    height: rem(264px);
+    margin-right: rem(40px);
+
+    @include tablet {
+      width: rem(130px);
+      height: rem(130px);
+      margin-right: 0;
+    }
   }
 
   &__block {
-    padding-top: 28px;
+    padding-top: rem(28px);
   }
 
   &__title {
-    color: #292929;
+    color: $black;
     font-weight: 700;
-    font-size: 27px;
-    line-height: 32px;
-    margin-bottom: 14px;
+    font-size: rem(27px);
+    line-height: 1.2;
+    margin-bottom: rem(14px);
   }
 
   &__text {
-    color: #666666;
+    color: $grey;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
-    margin-bottom: 25px;
+    font-size: rem(18px);
+    line-height: 1.2;
+    margin-bottom: rem(25px);
   }
 
   &__name {
-    color: #292929;
+    color: $black;
     font-weight: 500;
-    font-size: 18px;
-    line-height: 24px;
+    font-size: rem(18px);
+    line-height: 1.3;
   }
 }

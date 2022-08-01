@@ -1,5 +1,6 @@
 .order {
   background: url("./../../img/bg/order.png") no-repeat center / cover;
+  justify-content: center;
 
   .container {
     display: flex;
@@ -11,31 +12,58 @@
   .title {
     margin-top: 0;
     margin-bottom: 61px;
+
+    @include tablet {
+      margin-bottom: 32px;
+    }
   }
 
   &__form {
     display: flex;
+    justify-content: center;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+      width: 70%;
+    }
+
+    @include mobile {
+      width: 95%;
+    }
   }
 
   &__col-1 {
-    width: 462px;
+    width: 45%;
     margin-right: 26px;
+
+    @include tablet {
+      margin-right: 0;
+      margin-bottom: 16px;
+      width: 100%;
+    }
   }
 
   &__col-2 {
-    width: 450px;
+    width: 44%;
+
+    @include tablet {
+      width: 100%;
+    }
   }
 
   &__input-title,
   &__control-title {
-    color: #fff;
+    display: inline;
+    vertical-align: middle;
+    color: $white;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: rem(18px);
+    line-height: 1.5;
   }
 
   &__input-title {
-    margin-bottom: 2px;
+    margin-bottom: rem(2px);
   }
 
   &__row {
@@ -43,7 +71,7 @@
   }
 
   &__row:not(:last-child) {
-    margin-bottom: 14px;
+    margin-bottom: rem(14px);
   }
 
   &__row-item {
@@ -51,39 +79,54 @@
   }
 
   &__row-item:not(:last-child) {
-    margin-right: 14px;
+    margin-right: rem(14px);
   }
 
   &__input,
   &__input-textarea {
-    background-color: #fff;
+    background-color: $white;
     border-radius: 4px;
-    padding: 19px 12px;
+    padding: rem(19px) rem(12px);
     font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: rem(14px);
+    line-height: 1.42;
     color: #000;
   }
 
   &__input {
-    height: 58px;
+    height: rem(58px);
     width: 100%;
+
+    @include tablet {
+      height: rem(36px);
+    }
   }
 
   &__input:focus,
   &__input-textarea:focus {
-    outline: 3px solid #fedb3f;
+    outline: 3px solid $yellow;
   }
 
   &__input-textarea {
-    width: 450px;
-    height: 152px;
+    width: 100%;
+    height: rem(152px);
     resize: none;
-    margin-bottom: 36px;
+
+    @include tablet {
+      margin-bottom: 0;
+    }
   }
 
   &__controls {
-    margin-bottom: 44px;
+    margin-top: rem(36px);
+    margin-bottom: rem(30px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include mobile {
+      align-items: center;
+    }
   }
 
   &__input-radio,
@@ -96,10 +139,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 25px;
-    height: 25px;
-    background-color: #fff;
-    margin-right: 10px;
+    width: rem(25px);
+    height: rem(25px);
+    background-color: $white;
+    margin-right: rem(10px);
     cursor: pointer;
   }
 
@@ -113,7 +156,7 @@
     width: 50%;
     height: 50%;
     border-radius: 50%;
-    background-color: #fedb3f;
+    background-color: $yellow;
   }
 
   &__checkbox {
@@ -121,7 +164,7 @@
   }
 
   &__checkbox-icon {
-    fill: #fedb3f;
+    fill: $yellow;
     width: 40%;
     height: 35%;
     display: none;
@@ -131,34 +174,44 @@
     display: inline-block;
   }
 
+  @include tablet {
+    &__controls &__row {
+      margin-bottom: rem(21px);
+    }
+  }
+
   &__control {
     display: flex;
   }
 
   &__control-title {
     text-align: center;
-    line-height: 26px;
+    white-space: nowrap;
   }
 
   &__form-buttons {
     display: flex;
-    margin-left: -10px;
-    margin-bottom: 85px;
+    margin-left: rem(-10px);
+
+    @include tablet {
+      justify-content: center;
+      margin-left: 0;
+    }
   }
 
   &__btn-submit {
-    margin-right: 22px;
+    margin-right: rem(22px);
   }
 
   &__btn-reset {
     font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
-    color: #fff;
+    font-size: rem(18px);
+    line-height: 1.2;
+    color: $white;
     transition: 0.1s;
   }
 
   &__btn-reset:hover {
-    color: #fedb3f;
+    color: $yellow;
   }
 }

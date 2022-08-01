@@ -1,3 +1,27 @@
+@import "./fonts";
+@import "./mixins";
+@import "./functions";
+
+// Colors
+
+$grey: #666666;
+$yellow: #fedb3f;
+$yellow-dark: #ffd517;
+$white: #ffffff;
+$black: #292929;
+$blue: #1968b1;
+$socials-color: #b3b3b3;
+
+// Variables
+
+$fz: 16px;
+$container: 1100px;
+$header: 91px;
+$tablet: 768px;
+$mobile: 480px;
+
+// Reset
+
 * {
   margin: 0;
   padding: 0;
@@ -7,22 +31,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background-color: #fff;
-  color: #fff;
-  font-family: "Alegreya Sans", sans-serif;
-  font-style: normal;
-}
-
-section {
-  height: 100vh;
-  overflow: hidden;
 }
 
 li,
@@ -44,11 +52,38 @@ button {
   border: none;
   background: none;
   outline: none;
-  color: #fff;
-  font-family: "Alegreya Sans", sans-serif;
+  color: $white;
+  font-family: inherit;
   font-style: normal;
 }
 
+// General
+
+html {
+  scroll-behavior: smooth;
+  font-size: $fz;
+
+  @include tablet {
+    font-size: $fz - 2px;
+  }
+
+  @include mobile {
+    font-size: $fz - 4px;
+  }
+}
+
+body {
+  background-color: $white;
+  color: $white;
+  font-family: "Alegreya Sans", sans-serif;
+  font-style: normal;
+  width: 100%;
+}
+
 .wrapper {
-  min-width: 1100px;
+  width: 100%;
+}
+
+.page-content {
+  position: relative;
 }

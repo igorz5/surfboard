@@ -1,29 +1,43 @@
 .contacts {
+  color: $white;
+
   &__phone {
     display: flex;
     align-items: center;
+    transition: 0.1s;
   }
 
   &__address {
-    margin-bottom: 6px;
+    margin-bottom: rem(6px);
     font-weight: 400;
     font-style: normal;
-    font-size: 21px;
-    line-height: 24px;
+    font-size: rem(21px);
+    line-height: 1.2;
+    color: #000000;
   }
 
   &__phone-link {
-    color: #fff;
+    color: inherit;
     font-style: normal;
     font-weight: 700;
-    font-size: 22px;
-    line-height: 18px;
+    font-size: rem(22px);
+    line-height: 1;
+    white-space: nowrap;
+    transition: inherit;
+
+    &:hover {
+      color: $yellow-dark;
+    }
   }
 
   &__phone-icon {
-    fill: #fff;
-    width: 14px;
-    height: 14px;
-    margin-right: 6px;
+    fill: $white;
+    width: rem(14px);
+    height: rem(14px);
+    transition: inherit;
+  }
+
+  &__phone-link:hover &__phone-icon {
+    fill: $yellow-dark;
   }
 }

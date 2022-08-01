@@ -1,18 +1,19 @@
 .fixed-menu {
   position: fixed;
-  right: 45px;
+  right: 4%;
   top: 40%;
   transform: translateY(-50%);
+  z-index: 10;
 
   &__item:not(:last-child) {
-    margin-bottom: 7px;
+    margin-bottom: rem(7px);
   }
 
   &__link {
     display: inline-block;
     position: relative;
-    width: 18px;
-    height: 18px;
+    width: rem(18px);
+    height: rem(18px);
     border-radius: 50%;
 
     &::after {
@@ -23,12 +24,16 @@
       width: 50%;
       height: 50%;
       transform: translate(-50%, -50%);
-      background-color: #fff;
+      background-color: $white;
       border-radius: 50%;
     }
   }
 
   &__item--active &__link {
-    border: 1px solid #fff;
+    border: 1px solid $white;
+  }
+
+  @include tablet {
+    display: none;
   }
 }

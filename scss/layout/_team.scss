@@ -1,4 +1,7 @@
 .team {
+  display: flex;
+  justify-content: center;
+
   .container {
     display: flex;
     flex-direction: column;
@@ -8,10 +11,14 @@
 
   .title {
     margin-top: 0;
-    margin-bottom: 53px;
+    margin-bottom: rem(53px);
   }
 
   &__list {
     display: flex;
+
+    @include tablet {
+      flex-direction: column;
+    }
   }
 }

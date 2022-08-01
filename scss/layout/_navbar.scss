@@ -1,11 +1,13 @@
 .navbar {
   font-weight: 700;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: rem(18px);
+  line-height: 1.7;
 
   &__list {
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   &__item:not(:last-child) {
@@ -13,11 +15,12 @@
   }
 
   &__link {
-    color: #fff;
+    color: $white;
     transition: 0.1s;
+    white-space: nowrap;
   }
 
   &__link:hover {
-    color: #fedb3f;
+    color: $yellow;
   }
 }

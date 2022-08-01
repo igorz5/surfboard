@@ -1,18 +1,28 @@
 .reviews {
+  justify-content: center;
+
   .container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    @include mobile {
+      padding: 0 1rem;
+    }
   }
 
   .title {
     margin-top: 0;
-    margin-bottom: 32px;
+    margin-bottom: rem(32px);
   }
 
   &__list {
-    margin-bottom: 15px;
+    margin-bottom: rem(15px);
+
+    @include tablet {
+      margin-bottom: rem(32px);
+    }
   }
 
   &__pagination-list {
@@ -20,13 +30,13 @@
   }
 
   &__pagination-item:not(:last-child) {
-    margin-right: 6px;
+    margin-right: rem(6px);
   }
 
   &__pagination-btn {
     position: relative;
-    width: 74px;
-    height: 74px;
+    width: rem(74px);
+    height: rem(74px);
   }
 
   &__pagination-item--active &__pagination-btn::after {
@@ -37,7 +47,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    border: 6px solid #fedb3f;
+    border: 6px solid $yellow;
     border-radius: 50%;
   }
 

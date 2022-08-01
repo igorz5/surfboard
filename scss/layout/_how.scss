@@ -1,11 +1,14 @@
 .how {
   background-color: #f8faf9;
+  justify-content: center;
 
   .container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 100%;
+    padding: 0;
   }
 
   .title {
@@ -13,9 +16,16 @@
     margin-bottom: 30px;
   }
 
+  &__video-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 0 rem(44px);
+  }
+
   &__video {
-    width: 662px;
-    height: 392px;
-    border: 1px solid #292929;
+    width: rem(660px);
+    height: rem(392px);
+    border: 1px solid $black;
   }
 }
