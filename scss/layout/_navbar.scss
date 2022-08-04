@@ -23,4 +23,18 @@
   &__link:hover {
     color: $yellow;
   }
+
+  &--vertical {
+    line-height: 2;
+    font-size: rem(36px);
+    font-weight: 400;
+  }
+
+  &--vertical &__list {
+    flex-direction: column;
+  }
+
+  &--vertical &__item {
+    margin-right: 0;
+  }
 }
