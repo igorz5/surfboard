@@ -104,7 +104,7 @@
 
   &__input:focus,
   &__input-textarea:focus {
-    outline: 3px solid $yellow;
+    border: 3px solid $yellow;
   }
 
   &__input-textarea {

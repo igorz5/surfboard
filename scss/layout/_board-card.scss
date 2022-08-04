@@ -79,7 +79,7 @@
     text-align: left;
     padding: rem(18px) rem(13px);
     background-color: rgba(255, 255, 255, 0.8);
-    min-width: 273px;
+    min-width: rem(273px);
     border-radius: 4px;
     opacity: 0;
     visibility: hidden;
@@ -99,7 +99,7 @@
   &__params-item {
     display: flex;
     align-items: center;
-    padding: 15px 12px;
+    padding: rem(15px) rem(12px);
   }
 
   &__params-icon {
@@ -131,9 +131,13 @@
     padding-top: rem(9px);
 
     @include tablet {
-      width: 100%;
+      width: 76%;
       text-align: center;
       align-items: center;
+    }
+
+    @include mobile {
+      width: 80%;
     }
   }
 
