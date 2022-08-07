@@ -2,8 +2,8 @@
   display: flex;
   color: $grey;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: rem(18px);
+  line-height: 1.2;
 
   @include tablet {
     flex-direction: column;
@@ -27,7 +27,7 @@
   }
 
   &__params {
-    margin-bottom: 52px;
+    margin-bottom: rem(52px);
     @include tablet {
       display: none;
     }
@@ -39,7 +39,7 @@
     align-items: center;
     flex-direction: column;
     background-color: #3a587e;
-    padding: 15px 6px;
+    padding: rem(15px) rem(6px);
     border-radius: 4px;
     transition: 0.2s;
     cursor: pointer;
@@ -58,8 +58,8 @@
     &-icon {
       display: inline-block;
       vertical-align: bottom;
-      width: 38px;
-      height: 38px;
+      width: rem(38px);
+      height: rem(38px);
       fill: $white;
       margin-bottom: 7px;
     }
@@ -67,8 +67,8 @@
 
   &__params-text {
     font-weight: 700;
-    font-size: 14px;
-    line-height: 17px;
+    font-size: rem(14px);
+    line-height: 1.2;
     color: $white;
     text-transform: uppercase;
   }
@@ -103,18 +103,18 @@
   }
 
   &__params-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 12px;
+    width: rem(24px);
+    height: rem(24px);
+    margin-right: rem(12px);
     fill: #000;
   }
 
   &__params-name {
     display: inline-block;
-    margin-right: 12px;
+    margin-right: rem(12px);
     font-weight: 500;
     font-size: rem(16px);
-    line-height: 24px;
+    line-height: rem(24px);
     text-align: center;
   }
 
