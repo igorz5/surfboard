@@ -16,6 +16,11 @@
       sizes="16x16"
       href="./img/favicon-16x16.png"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <title>Surfboard — Профессиональные доски для серфинга</title>
@@ -54,7 +59,7 @@
                   <a href="#reviews" class="navbar__link">Отзывы</a>
                 </li>
                 <li class="navbar__item">
-                  <a href="#how" class="navbar__link">Как мы работает</a>
+                  <a href="#how" class="navbar__link">Как мы работаем</a>
                 </li>
                 <li class="navbar__item">
                   <a href="#map" class="navbar__link">Контакты</a>
@@ -183,7 +188,6 @@
         <section id="boards" class="boards section">
           <div class="container">
             <div class="boards__inner">
-              <button class="boards__prev"></button>
               <ul class="boards__list">
                 <li class="boards__item">
                   <div class="board-card">
@@ -291,7 +295,115 @@
                     </div>
                   </div>
                 </li>
+                <li class="boards__item">
+                  <div class="board-card">
+                    <div class="board-card__img-wrap">
+                      <img
+                        src="./img/boards/board-2.png"
+                        alt="Image"
+                        class="board-card__img"
+                      />
+                    </div>
+                    <div class="board-card__block">
+                      <div class="board-card__params">
+                        <div class="board-card__params-show">
+                          <div class="board-card__params-show-inner">
+                            <svg class="board-card__params-show-icon">
+                              <use
+                                xlink:href="./img/icons/sprite.svg#params"
+                              ></use>
+                            </svg>
+                            <div class="board-card__params-text">Параметры</div>
+                          </div>
+                        </div>
+                        <ul class="board-card__params-list">
+                          <li class="board-card__params-item">
+                            <svg class="board-card__params-icon">
+                              <use
+                                xlink:href="./img/icons/sprite.svg#length"
+                              ></use>
+                            </svg>
+                            <div class="board-card__params-name">
+                              Длина доски
+                            </div>
+                            <div class="board-card__params-value">от 2,5 м</div>
+                          </li>
+                          <li class="board-card__params-item">
+                            <svg class="board-card__params-icon">
+                              <use
+                                xlink:href="./img/icons/sprite.svg#width"
+                              ></use>
+                            </svg>
+                            <div class="board-card__params-name">
+                              Ширина доски
+                            </div>
+                            <div class="board-card__params-value">от 40 см</div>
+                          </li>
+                          <li class="board-card__params-item">
+                            <svg class="board-card__params-icon">
+                              <use
+                                xlink:href="./img/icons/sprite.svg#thickness"
+                              ></use>
+                            </svg>
+                            <div class="board-card__params-name">Толщина</div>
+                            <div class="board-card__params-value">8 см</div>
+                          </li>
+                          <li class="board-card__params-item">
+                            <svg class="board-card__params-icon">
+                              <use
+                                xlink:href="./img/icons/sprite.svg#time"
+                              ></use>
+                            </svg>
+                            <div class="board-card__params-name">
+                              Срок службы
+                            </div>
+                            <div class="board-card__params-value">5 лет</div>
+                          </li>
+                          <li class="board-card__params-item">
+                            <svg class="board-card__params-icon">
+                              <use
+                                xlink:href="./img/icons/sprite.svg#weight"
+                              ></use>
+                            </svg>
+                            <div class="board-card__params-name">Вес</div>
+                            <div class="board-card__params-value">7-8 кг</div>
+                          </li>
+                        </ul>
+                      </div>
+                      <h2 class="board-card__title">Шортборд</h2>
+                      <p class="board-card__desc">
+                        Самые быстрые доски для профессионалов. Размеры
+                        шортбордов позволяют быстро набирать скорость, делать
+                        различные трюки на волне, включая резкие повороты и
+                        развороты, флоатеры (проезды по самому гребню волны),
+                        различные прыжки с вращениями или без, а также катание в
+                        трубах.
+                      </p>
+                      <ul class="board-card__props">
+                        <li class="board-card__props-item">
+                          <div class="board-card__props-name">Длина доски</div>
+                          <div class="board-card__props-value">
+                            от 1,5 метров
+                          </div>
+                        </li>
+                        <li class="board-card__props-item">
+                          <div class="board-card__props-name">Ширина доски</div>
+                          <div class="board-card__props-value">
+                            от 30 сантиметров
+                          </div>
+                        </li>
+                      </ul>
+                      <div class="board-card__block-bottom">
+                        <div class="board-card__price">12000 ₽</div>
+                        <a href="#order" class="board-card__btn btn">
+                          Заказать
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
               </ul>
+              <button class="boards__prev"></button>
               <button class="boards__next"></button>
             </div>
           </div>
@@ -433,16 +545,21 @@
           <div class="container">
             <h1 class="title">Отзывы</h1>
             <ul class="reviews__list">
-              <li class="reviews__item">
+              <li
+                class="reviews__item reviews__item--active"
+                data-review-id="0"
+              >
                 <div class="review-card">
                   <div class="review-card__inner">
-                    <img
-                      src="./img/avatars/avatar-1.png"
-                      alt="Avatar"
-                      width="253"
-                      height="264"
-                      class="review-card__avatar"
-                    />
+                    <div class="review-card__avatar-wrap">
+                      <img
+                        src="./img/avatars/avatar-1.png"
+                        alt="Avatar"
+                        width="253"
+                        height="264"
+                        class="review-card__avatar"
+                      />
+                    </div>
                     <article class="review-card__block">
                       <h4 class="review-card__title">Лучший дизайн</h4>
                       <p class="review-card__text">
@@ -457,16 +574,18 @@
                   </div>
                 </div>
               </li>
-              <li class="reviews__item" hidden>
+              <li class="reviews__item" data-review-id="1">
                 <div class="review-card">
                   <div class="review-card__inner">
-                    <img
-                      src="./img/avatars/avatar-2.png"
-                      alt="Avatar"
-                      width="253"
-                      height="264"
-                      class="review-card__avatar"
-                    />
+                    <div class="review-card__avatar-wrap">
+                      <img
+                        src="./img/avatars/avatar-2.png"
+                        alt="Avatar"
+                        width="253"
+                        height="264"
+                        class="review-card__avatar"
+                      />
+                    </div>
                     <article class="review-card__block">
                       <h4 class="review-card__title">Нереальная скорость</h4>
                       <p class="review-card__text">
@@ -481,16 +600,18 @@
                   </div>
                 </div>
               </li>
-              <li class="reviews__item" hidden>
+              <li class="reviews__item" data-review-id="2">
                 <div class="review-card">
                   <div class="review-card__inner">
-                    <img
-                      src="./img/avatars/avatar-3.png"
-                      alt="Avatar"
-                      width="253"
-                      height="264"
-                      class="review-card__avatar"
-                    />
+                    <div class="review-card__avatar-wrap">
+                      <img
+                        src="./img/avatars/avatar-3.png"
+                        alt="Avatar"
+                        width="253"
+                        height="264"
+                        class="review-card__avatar"
+                      />
+                    </div>
                     <article class="review-card__block">
                       <h4 class="review-card__title">
                         Устойчивость и безопасность
@@ -512,6 +633,7 @@
               <ul class="reviews__pagination-list">
                 <li
                   class="reviews__pagination-item reviews__pagination-item--active"
+                  data-review-id="0"
                 >
                   <button class="reviews__pagination-btn">
                     <img
@@ -523,7 +645,7 @@
                     />
                   </button>
                 </li>
-                <li class="reviews__pagination-item">
+                <li class="reviews__pagination-item" data-review-id="1">
                   <button class="reviews__pagination-btn">
                     <img
                       src="./img/avatars/avatar-circle-2.png"
@@ -534,7 +656,7 @@
                     />
                   </button>
                 </li>
-                <li class="reviews__pagination-item">
+                <li class="reviews__pagination-item" data-review-id="2">
                   <button class="reviews__pagination-btn">
                     <img
                       src="./img/avatars/avatar-circle-3.png"
@@ -572,6 +694,7 @@
                       name="name"
                       id="order-name"
                       class="order__input"
+                      required
                     />
                   </div>
                   <div class="order__row-item">
@@ -583,6 +706,7 @@
                       name="phone"
                       id="order-phone"
                       class="order__input"
+                      required
                     />
                   </div>
                 </div>
@@ -609,6 +733,7 @@
                       name="house"
                       id="order-house"
                       class="order__input"
+                      required
                     />
                   </div>
                   <div class="order__row-item">
@@ -631,6 +756,7 @@
                       name="flat"
                       id="order-flat"
                       class="order__input"
+                      required
                     />
                   </div>
                   <div class="order__row-item">
@@ -657,6 +783,7 @@
                       value="comment"
                       id="order-comment"
                       class="order__input-textarea"
+                      required
                     ></textarea>
                   </div>
                 </div>
@@ -844,7 +971,23 @@
         </ul>
       </nav>
     </div>
+    <div class="modal">
+      <div class="modal__block">
+        <div class="modal__text"></div>
+        <button class="modal__btn btn">Закрыть</button>
+      </div>
+    </div>
 
-    <script src="./js/fullscreen-navbar.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="./js/fullscreenNavbar.js"></script>
+    <script src="./js/team.js"></script>
+    <script src="./js/boards.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/order.js"></script>
+    <script src="./js/reviews.js"></script>
   </body>
 </html>

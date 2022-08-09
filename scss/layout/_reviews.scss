@@ -25,6 +25,14 @@
     }
   }
 
+  &__item {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+
   &__pagination-list {
     display: flex;
   }
@@ -39,7 +47,7 @@
     height: rem(74px);
   }
 
-  &__pagination-item--active &__pagination-btn::after {
+  &__pagination-btn::after {
     content: "";
     display: inline-block;
     position: absolute;
@@ -47,8 +55,13 @@
     height: 100%;
     top: 0;
     left: 0;
-    border: 4px solid $yellow;
     border-radius: 50%;
+    border: 0 solid $yellow;
+    transition: 0.1s;
+  }
+
+  &__pagination-item--active &__pagination-btn::after {
+    border: 4px solid $yellow;
   }
 
   &__pagination-avatar {

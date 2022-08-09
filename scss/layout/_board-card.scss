@@ -4,6 +4,7 @@
   font-weight: 400;
   font-size: rem(18px);
   line-height: 1.2;
+  align-items: center;
 
   @include tablet {
     flex-direction: column;
@@ -12,9 +13,11 @@
 
   &__img-wrap {
     width: 50%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 3%;
 
     @include tablet {
       margin-right: 0;
@@ -106,7 +109,7 @@
     width: rem(24px);
     height: rem(24px);
     margin-right: rem(12px);
-    fill: #000;
+    fill: $black;
   }
 
   &__params-name {
@@ -125,9 +128,10 @@
   }
 
   &__block {
+    width: 50%;
+    max-width: rem(374px);
     display: flex;
     flex-direction: column;
-    width: 43%;
     padding-top: rem(9px);
 
     @include tablet {
@@ -173,8 +177,16 @@
     font-size: rem(60px);
     line-height: 1;
     color: $black;
-    margin-right: 10%;
     white-space: nowrap;
+    margin-right: rem(6px);
+
+    @include tablet {
+      margin-right: rem(37px);
+    }
+  }
+
+  &__btn {
+    margin-left: auto;
   }
 
   &__block-bottom {

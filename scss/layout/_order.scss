@@ -91,7 +91,7 @@
     font-weight: 400;
     font-size: rem(14px);
     line-height: 1.42;
-    color: #000;
+    color: $black;
 
     @include tablet {
       padding: rem(7px) rem(5px);

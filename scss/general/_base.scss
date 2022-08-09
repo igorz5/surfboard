@@ -8,10 +8,12 @@ $grey: #666666;
 $yellow: #fedb3f;
 $yellow-dark: #ffd517;
 $white: #ffffff;
-$black: #292929;
+$black: #000000;
+$dark: #292929;
 $blue: #1968b1;
 $socials-color: #b3b3b3;
-$fullscreen-navbar-color: #333537;
+$dark-bg: #333537;
+$dark-bg-transparent: adjust-color(#333537, $alpha: -0.1);
 
 // Variables
 

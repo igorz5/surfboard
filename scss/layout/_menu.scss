@@ -29,7 +29,7 @@
 
   &__btn {
     display: flex;
-    background-color: #1968b1;
+    background-color: $blue;
     padding: rem(39px) rem(22px);
     align-items: flex-end;
     width: rem(102px);
@@ -48,7 +48,7 @@
     max-width: 0;
     overflow: hidden;
     transition: 0.4s;
-    background-color: rgba(51, 53, 55, 0.9);
+    background-color: $dark-bg-transparent;
     backdrop-filter: blur(5px);
   }
 

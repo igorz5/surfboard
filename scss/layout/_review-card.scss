@@ -1,5 +1,10 @@
 .review-card {
   background-color: #f8faf9;
+  min-height: rem(348px);
+
+  @include tablet {
+    min-height: rem(418px);
+  }
 
   &__inner {
     display: flex;
@@ -12,6 +17,11 @@
       padding: rem(56px) rem(24px) rem(46px);
       text-align: center;
     }
+  }
+
+  &__avatar-wrap {
+    display: flex;
+    align-items: center;
   }
 
   &__avatar {
