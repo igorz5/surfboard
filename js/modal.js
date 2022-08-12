@@ -5,8 +5,11 @@ const modalBtn = $(".modal__btn");
 let closeCallback = null;
 
 function openModal(text, isError = false, callback) {
+  if (isModalOpen()) return;
+
   modal.addClass("modal--active");
   modalText.text(text);
+  lockScroll();
 
   if (isError) {
     modalText.css("color", "#fd3f44");
@@ -18,13 +21,28 @@ function openModal(text, isError = false, callback) {
 }
 
 function closeModal() {
+  if (!isModalOpen()) return;
+
   modal.removeClass("modal--active");
   modalText.text("");
+  unlockScroll();
 
   if (closeCallback) {
     closeCallback();
     closeCallback = null;
   }
+}
+
+function isModalOpen() {
+  return modal.hasClass("modal--active");
+}
+
+function lockScroll() {
+  $("body").css("overflow", "hidden");
+}
+
+function unlockScroll() {
+  $("body").css("overflow", "auto");
 }
 
 modalBtn.click(function () {

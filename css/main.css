@@ -1186,6 +1186,9 @@ body {
 .order__input:focus, .order__input-textarea:focus {
   border: 3px solid #fedb3f;
 }
+.order__input--invalid, .order__input-textarea--invalid, .order__input--invalid:focus, .order__input-textarea--invalid:focus {
+  border: 3px solid red;
+}
 .order__input-textarea {
   width: 100%;
   height: 9.5rem;

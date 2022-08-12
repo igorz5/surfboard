@@ -112,6 +112,13 @@
     border: 3px solid $yellow;
   }
 
+  &__input--invalid,
+  &__input-textarea--invalid,
+  &__input--invalid:focus,
+  &__input-textarea--invalid:focus {
+    border: 3px solid red;
+  }
+
   &__input-textarea {
     width: 100%;
     height: rem(152px);
