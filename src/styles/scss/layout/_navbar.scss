@@ -1,0 +1,41 @@
+.navbar {
+  font-weight: 700;
+  font-size: rem(18px);
+  line-height: 1.7;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 22px;
+  }
+
+  &__link {
+    color: $white;
+    transition: 0.1s;
+    white-space: nowrap;
+  }
+
+  &__link:hover {
+    color: $yellow;
+    cursor: pointer;
+  }
+
+  &--vertical {
+    line-height: 2;
+    font-size: rem(36px);
+    font-weight: 400;
+  }
+
+  &--vertical &__list {
+    flex-direction: column;
+  }
+
+  &--vertical &__item {
+    margin-right: 0;
+  }
+}

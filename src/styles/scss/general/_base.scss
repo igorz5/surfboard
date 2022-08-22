@@ -1,0 +1,106 @@
+@import "./fonts";
+@import "./mixins";
+@import "./functions";
+
+// Colors
+
+$grey: #666666;
+$light-grey: #b3b3b3;
+$yellow: #fedb3f;
+$yellow-dark: #ffd517;
+$white: #ffffff;
+$black: #000000;
+$dark: #292929;
+$blue: #1968b1;
+$socials-color: #b3b3b3;
+$dark-bg: #333537;
+$dark-bg-transparent: adjust-color(#333537, $alpha: -0.1);
+$play-grey-color: #404040;
+$player-line-color: #626262;
+
+// Variables
+
+$fz: 16px;
+$container: 1100px;
+$header: 91px;
+$tablet: 768px;
+$mobile: 480px;
+
+// Reset
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+li,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+input,
+textarea,
+button {
+  border: none;
+  background: none;
+  outline: none;
+  color: $white;
+  font-family: inherit;
+  font-style: normal;
+  -webkit-tap-highlight-color: transparent;
+}
+
+// General
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: $fz;
+
+  @include tablet {
+    font-size: $fz - 2px;
+  }
+
+  @include mobile {
+    font-size: $fz - 4px;
+  }
+}
+
+body {
+  background-color: $white;
+  color: $white;
+  font-family: "Alegreya Sans", sans-serif;
+  font-style: normal;
+  width: 100%;
+  min-width: 320px;
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.page-content {
+  position: relative;
+  height: 100%;
+  transition: 0.5s;
+}

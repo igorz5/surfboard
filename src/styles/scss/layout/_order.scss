@@ -1,0 +1,229 @@
+.order {
+  background: url("../img/bg/order.png") no-repeat center / cover;
+  justify-content: center;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .title {
+    margin-top: 0;
+    margin-bottom: 61px;
+
+    @include tablet {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    justify-content: center;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+      width: 70%;
+    }
+
+    @include mobile {
+      width: 95%;
+    }
+  }
+
+  &__col-1 {
+    width: 45%;
+    margin-right: 26px;
+
+    @include tablet {
+      margin-right: 0;
+      margin-bottom: 16px;
+      width: 100%;
+    }
+  }
+
+  &__col-2 {
+    width: 44%;
+
+    @include tablet {
+      width: 100%;
+    }
+  }
+
+  &__input-title,
+  &__control-title {
+    display: inline;
+    vertical-align: middle;
+    color: $white;
+    font-weight: 400;
+    font-size: rem(18px);
+    line-height: 1.5;
+  }
+
+  &__input-title {
+    margin-bottom: rem(2px);
+  }
+
+  &__row {
+    display: flex;
+  }
+
+  &__row:not(:last-child) {
+    margin-bottom: rem(14px);
+  }
+
+  &__row-item {
+    flex: 1;
+  }
+
+  &__row-item:not(:last-child) {
+    margin-right: rem(14px);
+  }
+
+  &__input,
+  &__input-textarea {
+    background-color: $white;
+    border-radius: 4px;
+    border: 3px solid transparent;
+    padding: rem(15px) rem(9px);
+    font-weight: 400;
+    font-size: rem(14px);
+    line-height: 1.42;
+    color: $black;
+
+    @include tablet {
+      padding: rem(7px) rem(5px);
+    }
+  }
+
+  &__input {
+    height: rem(58px);
+    width: 100%;
+
+    @include tablet {
+      height: rem(36px);
+    }
+  }
+
+  &__input:focus,
+  &__input-textarea:focus {
+    border: 3px solid $yellow;
+  }
+
+  &__input--invalid,
+  &__input-textarea--invalid,
+  &__input--invalid:focus,
+  &__input-textarea--invalid:focus {
+    border: 3px solid red;
+  }
+
+  &__input-textarea {
+    width: 100%;
+    height: rem(152px);
+    resize: none;
+
+    @include tablet {
+      margin-bottom: 0;
+    }
+  }
+
+  &__controls {
+    margin-top: rem(36px);
+    margin-bottom: rem(30px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include mobile {
+      align-items: center;
+    }
+  }
+
+  &__input-radio,
+  &__input-checkbox {
+    display: none;
+  }
+
+  &__radio,
+  &__checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(25px);
+    height: rem(25px);
+    background-color: $white;
+    margin-right: rem(10px);
+    cursor: pointer;
+  }
+
+  &__radio {
+    border-radius: 50%;
+  }
+
+  &__input-radio:checked + &__radio::after {
+    display: inline-block;
+    content: "";
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    background-color: $yellow;
+  }
+
+  &__checkbox {
+    border-radius: 4px;
+  }
+
+  &__checkbox-icon {
+    fill: $yellow;
+    width: 40%;
+    height: 35%;
+    display: none;
+  }
+
+  &__input-checkbox:checked + &__checkbox &__checkbox-icon {
+    display: inline-block;
+  }
+
+  @include tablet {
+    &__controls &__row {
+      margin-bottom: rem(21px);
+    }
+  }
+
+  &__control {
+    display: flex;
+  }
+
+  &__control-title {
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  &__form-buttons {
+    display: flex;
+    margin-left: rem(-10px);
+
+    @include tablet {
+      justify-content: center;
+      margin-left: 0;
+    }
+  }
+
+  &__btn-submit {
+    margin-right: rem(22px);
+  }
+
+  &__btn-reset {
+    font-weight: 400;
+    font-size: rem(18px);
+    line-height: 1.2;
+    color: $white;
+    transition: 0.1s;
+  }
+
+  &__btn-reset:hover {
+    color: $yellow;
+  }
+}

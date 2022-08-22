@@ -1,0 +1,25 @@
+.how {
+  background-color: #f8faf9;
+  justify-content: center;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+
+  .title {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  &__player-wrapper {
+    width: 80vw;
+    height: 45vw;
+    max-width: 662px;
+    max-height: 373px;
+  }
+}
