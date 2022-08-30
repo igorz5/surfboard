@@ -42,6 +42,13 @@ orderForm.on("submit", function (e) {
       });
     });
 
+    xhr.addEventListener("error", function () {
+      const msg = "Упс... Произошла ошибка";
+      openModal(msg, true, () => {
+        orderForm.trigger("reset");
+      });
+    });
+
     xhr.send(JSON.stringify(data));
   }
 });

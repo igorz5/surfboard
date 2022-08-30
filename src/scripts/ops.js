@@ -7,12 +7,6 @@ let currentPage = 0;
 let nextPageScroll = Date.now();
 let canScroll = true;
 
-// For some reason, the browser saves the scroll and resume
-// it when the page reloads, breaking the OPS, so we need to reset it
-window.addEventListener("load", function () {
-  this.scrollTo(0, 0);
-});
-
 window.addEventListener("wheel", function (e) {
   if (e.deltaY > 0) {
     nextPage();
@@ -23,7 +17,7 @@ window.addEventListener("wheel", function (e) {
 
 function nextPage() {
   if (!canScroll) return;
-  if (currentPage > sections.length - 1) return;
+  if (currentPage >= sections.length - 1) return;
   if (nextPageScroll > Date.now()) return;
 
   currentPage++;
@@ -33,7 +27,7 @@ function nextPage() {
 
 function prevPage() {
   if (!canScroll) return;
-  if (currentPage > sections.length - 1) return;
+  if (currentPage <= 0) return;
   if (nextPageScroll > Date.now()) return;
 
   currentPage--;
@@ -73,31 +67,36 @@ function unlockScroll() {
 
 let startY = 0;
 let endY = 0;
+let lastTime = 0;
+let startTimeReset = 60;
 let minDist = 40;
-let touchMoved = false;
 
 $("body").on("touchstart", function (e) {
+  if (e.touches.length > 1) return;
+
   startY = e.touches[0].screenY;
+  endY = startY;
 });
 
 $("body").on("touchmove", function (e) {
-  endY = e.touches[0].screenY;
+  if (e.touches.length > 1) return;
 
-  touchMoved = true;
+  if (e.timeStamp > lastTime + startTimeReset) {
+    startY = e.touches[0].screenY;
+  }
+
+  endY = e.touches[0].screenY;
+  lastTime = e.timeStamp;
 });
 
 $("body").on("touchend", function (e) {
-  if (!touchMoved) return;
-
-  touchMoved = false;
-
   let d = startY - endY;
   let delta = Math.sign(d);
 
   if (Math.abs(d) >= minDist) {
     if (delta > 0) {
       nextPage();
-    } else if (delta < 0) {
+    } else {
       prevPage();
     }
   }
