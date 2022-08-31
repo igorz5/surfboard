@@ -62,7 +62,7 @@ gulp.task("styles", () => {
     .pipe(gulpif(isDev, sourcemaps.init()))
     .pipe(sass().on("error", sass.logError))
     .pipe(autoprefixer({ env: process.env.NODE_ENV }))
-    .pipe(gulpif(isDev, cleanCSS({ compatibility: "ie8" })))
+    .pipe(gulpif(isProd, cleanCSS({ compatibility: "ie8" })))
     .pipe(gulpif(isDev, sourcemaps.write(".")))
     .pipe(gulp.dest(paths.styles.dest));
 });

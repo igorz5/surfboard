@@ -1,7 +1,7 @@
 const sections = $(".section");
 const content = $(".page-content");
 
-const scrollTimeoutMS = 800;
+const scrollTimeoutMS = 1200;
 
 let currentPage = 0;
 let canScroll = true;
