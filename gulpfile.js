@@ -22,7 +22,7 @@ const paths = {
   scripts: {
     dest: `${dist}/js`,
     path: "./src/scripts/**/*.js",
-    output: "bundle.min.js",
+    output: "bundle.js",
     libs: [
       "./node_modules/jquery/dist/jquery.js",
       "./node_modules/slick-carousel/slick/slick.js",
@@ -33,7 +33,7 @@ const paths = {
     css: "./src/styles/css/**/*.css",
     scss: "./src/styles/scss/main.scss",
     path: "./src/styles/**/*.+(css|scss)",
-    output: "main.min.css",
+    output: "main.css",
     libs: ["./node_modules/slick-carousel/slick/slick.css"],
   },
   icons: {
@@ -62,7 +62,7 @@ gulp.task("styles", () => {
     .pipe(gulpif(isDev, sourcemaps.init()))
     .pipe(sass().on("error", sass.logError))
     .pipe(autoprefixer({ env: process.env.NODE_ENV }))
-    .pipe(cleanCSS({ compatibility: "ie8" }))
+    .pipe(gulpif(isDev, cleanCSS({ compatibility: "ie8" })))
     .pipe(gulpif(isDev, sourcemaps.write(".")))
     .pipe(gulp.dest(paths.styles.dest));
 });
@@ -76,7 +76,7 @@ gulp.task("scripts", () => {
         presets: ["@babel/env"],
       })
     )
-    .pipe(uglify())
+    .pipe(gulpif(isProd, uglify()))
     .pipe(concat(paths.scripts.output))
     .pipe(gulpif(isDev, sourcemaps.write(".")))
     .pipe(gulp.dest(paths.scripts.dest));

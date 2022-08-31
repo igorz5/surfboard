@@ -1,10 +1,9 @@
 const sections = $(".section");
 const content = $(".page-content");
 
-const scrollTimeoutMS = 400;
+const scrollTimeoutMS = 800;
 
 let currentPage = 0;
-let nextPageScroll = Date.now();
 let canScroll = true;
 
 window.addEventListener("wheel", function (e) {
@@ -18,21 +17,17 @@ window.addEventListener("wheel", function (e) {
 function nextPage() {
   if (!canScroll) return;
   if (currentPage >= sections.length - 1) return;
-  if (nextPageScroll > Date.now()) return;
 
   currentPage++;
   scrollToPage(currentPage);
-  nextPageScroll = Date.now() + scrollTimeoutMS;
 }
 
 function prevPage() {
   if (!canScroll) return;
   if (currentPage <= 0) return;
-  if (nextPageScroll > Date.now()) return;
 
   currentPage--;
   scrollToPage(currentPage);
-  nextPageScroll = Date.now() + scrollTimeoutMS;
 }
 
 function scrollToPage(idx) {
@@ -42,6 +37,10 @@ function scrollToPage(idx) {
     currentPage = idx;
 
     updateFixedMenu();
+
+    lockScroll();
+
+    setTimeout(unlockScroll, scrollTimeoutMS);
   }
 }
 
