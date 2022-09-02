@@ -57,10 +57,10 @@ gulp.task("clean", () => {
 
 gulp.task("styles", () => {
   return gulp
-    .src([...paths.styles.libs, paths.styles.css, paths.styles.scss])
-    .pipe(concat(paths.styles.output))
+    .src([paths.styles.scss, paths.styles.css, ...paths.styles.libs])
     .pipe(gulpif(isDev, sourcemaps.init()))
     .pipe(sass().on("error", sass.logError))
+    .pipe(concat(paths.styles.output))
     .pipe(autoprefixer({ env: process.env.NODE_ENV }))
     .pipe(gulpif(isProd, cleanCSS({ compatibility: "ie8" })))
     .pipe(gulpif(isDev, sourcemaps.write(".")))
